@@ -145,13 +145,11 @@ body {
 }
 /* Icons */
 .icons {
-  grid-area: icons;
+  /* grid-area: icons; */
   margin-top: 12px;
-  /* icons in a row */
-  grid-template-areas: "icon1 icon2 icon3 icon4";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  /* add top and bottom bottom grey border */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
   border-top: 1px solid #6e767d;
   border-bottom: 1px solid #6e767d;
 }
