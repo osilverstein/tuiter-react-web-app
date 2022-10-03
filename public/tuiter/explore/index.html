@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuiter</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- /* black background for page */
+  body {
+    background-color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    grid-template-areas:
+      "search"
+      "explore-links"
+      "main-content";
+  }
+  .search-box {
+    grid-area: search;
+    grid-template-areas: "left-search search-settings-icon";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .search {
+    grid-area: left-search;
+    grid-template-areas: "search-icon search-text";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: #1c1c1c;
+    margin: 50px;
+  }
+  .search-icon {
+    grid-area: search-icon;
+    margin: 5px;
+    width: 4%;
+    height: 4%;
+  }
+  .search-text {
+    grid-area: search-text;
+    background-color: #1c1c1c;
+    margin-top: 7px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    vertical-align: top;
+  }
+  .search-settings-icon {
+    grid-area: search-settings-icon;
+    margin: 5px;
+    width: 4%;
+    height: 4%;
+  }
+  
+  .explore-links {
+    grid-area: explore-links;
+    border-bottom: 1px solid #1c1c1c;
+    padding: 16px;
+    margin: 5px;
+  }
+  .explore-links a {
+    color: #6e767d;
+    font-size: 15px;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .explore-links a:hover {
+    color: #1da1f2;
+  }
+  .explore-links a.active {
+    color: #1da1f2;
+    border-bottom: 2px solid #1da1f2;
+  }
+  .main-content {
+    grid-area: main-content;
+    padding: 16px;
+    margin: 5px;
+  }
+  .main-content h2 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+  .main-content h4 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content img {
+    border-radius: 10px;
+    float: right;
+    margin-right: 16px;
+    width: 70px;
+    /* make height equal to width */
+    height: 70px;
+    /* move up 10px */
+    margin-top: -50px;
+  } -->
+  
+  
+  
+  <!-- search icon is search.png, settings icon is gear.png -->
+  <div class="search-box">
+    <div class="search">
+      <img class="search-icon" src="search.png" />
+      <input class="search-text" type="text" placeholder="Search Twitter" />
+    </div>
+    <img class="search-settings-icon" src="gear.png" />
+  </div>
+
+  <!-- Below the search input field there are a set of hyperlinks labeled "For you", "Trending", etc. The first link is highlighted with RGB color 29,161,242. The border below the highlighted link is the same color. All other links are color 110, 118, 125. The link fonts are 15px and padded all around by 16px. -->
+  <div class="explore-links">
+    <a href="explore.html" class="active">For you</a>
+    <a href="explore.html">Trending</a>
+    <a href="explore.html">News</a>
+    <a href="explore.html">Sports</a>
+    <a href="explore.html">Entertainment</a>
+    <a href="explore.html">More</a>
+  </div>
+  <!-- Below the links there are suggested posts. The suggested posts have the topic, title and number of tuits. The topic, "Trending in Science", "Sports Tranding", "Trending in United States", have 13px font and color 110, 118, 125 -->
+  <!-- Some suggested posts additionally have the name of the author of the post, "The New York Times" in white and an image with rounded 	corners all the way to the right. The image is 100px wide and high. The image is 16px from the right border -->
+  <!-- Some suggested posts don't have the name of the author of the post. Instead they have the topic of the post, e.g., "COVID-19" in light gray and an image with rounded corners all the way to the right. The image is 100px wide and high. The image is 16px from the right border. -->
+  <!-- .main-content {
+    grid-area: main-content;
+    padding: 16px;
+    margin: 5px;
+  }
+  .main-content h2 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+  .main-content h4 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    float: right;
+    margin-right: 16px;
+  } -->
+  <div class="main-content">
+    <h2>Trending in Science</h2>
+    <h3>What is the difference between a virus and a bacterium?</h3>
+    <h4>1.2k tuits</h4>
+    <img src="virus.png" />
+  </div>
+  <div class="main-content">
+    <h2>Trending in Sports</h2>
+    <h3>What is the difference between a virus and a bacterium?</h3>
+    <h4>1.2k tuits</h4>
+    <img src="virus.png" />
+  </div>
+  <div class="main-content">
+    <h2>Trending in United States</h2>
+    <h3>What is the difference between a virus and a bacterium?</h3>
+    <h4>1.2k tuits</h4>
+    <img src="virus.png" />
+  </div>
+</body>
+
+</html>

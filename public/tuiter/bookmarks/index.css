@@ -1,0 +1,173 @@
+/* Bookmarks CSS
+/* CSS for the bookmarks page */
+/* Use grid */
+/* 
+16px from the left border and 12px from the top edge, there's a title at the top that says "Bookmarks" as shown in the wireframe. The color of the title is white and the size of the font is 20px. Below the title is the handle of the user "@WebDev" who bookmarked the posts listed in this screen. The color of the handle is light gray and the font size is 13px. There are 16px between the title and its closest left edge. 12px below the handle there's a light gray solid 1px border.
+
+
+16px from the left border and 12px below the title and handle's border  there's a circular "avatar" image that represents the user who posted the content originally. The image has a diameter of 48px.
+
+
+12px to the right of the avatar image and 12px below the title and handle's border, we find the name of the author of the post "Robert Zubrin" followed by their handle "@robert_zubrin". The font size of the author and their handle is 15px. The author color is white and the handle is light gray. There's a date after the handle.
+
+
+Below the author's name we find the main content of the post in color white and font size 15px. The width of the content can not exceed 506px. The text is 16px away to the left of the right edge and 12px above the image E described below.
+
+
+
+
+
+12px below the main content there is an image 504px by 264px in size. The edges of the image are rounded at the top corners. The image is 12px to the right of the avatar image.
+
+
+12px below the image there's a white bold title with 15px font size. Below the title there's text with the same size but light gray in color. The title and text are padded on all sides by 12px. The bottom of the text is rounded in the corners. The image E and text below it have a thin border of 1px in width and light gray color.
+
+
+12px below the text there are 4 icons with numbers next to them. Each pair of icons and numbers makes a hyperlink pointing to "#". The links are equally spaced out. There are 12px between the icons and the numbers. The heart icon and number next to it is the color red. All other icons and numbers are light gray. */
+
+body {
+  background-color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  grid-template-areas:
+    "header"
+    "main-content";
+}
+
+/* Header has title with handle below, three dots on the right */
+.header {
+  grid-area: header;
+  grid-template-areas: "title three-dots";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 12px;
+  margin-left: 16px;
+}
+/* Title has title above handle */
+.title {
+  grid-area: title;
+  grid-template-areas: "title" "handle";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.title-text {
+  grid-area: title;
+  color: white;
+  font-size: 20px;
+}
+.handle {
+  grid-area: handle;
+  color: #6e767d;
+  font-size: 13px;
+}
+.three-dots {
+  grid-area: three-dots;
+  margin-right: 16px;
+  margin-top: -25px;
+  width: 4%;
+  height: 4%;
+  float: right;
+}
+.three-dots img {
+  width: 50%;
+  height: 50%;
+  margin-top: -100px;
+}
+.main-content {
+  grid-area: main-content;
+  grid-template-areas: "avatar author" "content content" "image image" "title title" "text text" "icons icons";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/* Avatar */
+.avatar {
+  grid-area: avatar;
+  margin-top: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* Content */
+.content {
+  grid-area: content;
+  margin-top: 12px;
+  color: white;
+  font-size: 15px;
+  width: 506px;
+}
+/* Author */
+.author {
+  grid-area: author;
+  margin-top: 12px;
+  grid-template-areas: "author" "handle" "date";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.author-text {
+  grid-area: author;
+  color: white;
+  font-size: 15px;
+}
+.handle {
+  grid-area: handle;
+  color: #6e767d;
+  font-size: 13px;
+}
+.date {
+  grid-area: date;
+  color: #6e767d;
+  font-size: 13px;
+}
+/* Image */
+.image {
+  grid-area: image;
+  margin-top: 12px;
+  width: 504px;
+  height: 264px;
+  border-radius: 12px 12px 0 0;
+}
+/* Title */
+.title {
+  grid-area: title;
+  margin-top: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* Text */
+.text {
+  grid-area: text;
+  margin-top: 12px;
+  color: #6e767d;
+  font-size: 15px;
+  border-radius: 12px;
+}
+/* Icons */
+.icons {
+  grid-area: icons;
+  margin-top: 12px;
+  /* icons in a row */
+  grid-template-areas: "icon1 icon2 icon3 icon4";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* add top and bottom bottom grey border */
+  border-top: 1px solid #6e767d;
+  border-bottom: 1px solid #6e767d;
+}
+.icon1 {
+  grid-area: icon1;
+  color: red;
+}
+.icon2 {
+  grid-area: icon2;
+  color: #6e767d;
+}
+.icon3 {
+  grid-area: icon3;
+  color: #6e767d;
+}
+.icon4 {
+  grid-area: icon4;
+  color: #6e767d;
+}

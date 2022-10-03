@@ -1,0 +1,100 @@
+	/* black background for page */
+  body {
+    background-color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    grid-template-areas:
+      "search"
+      "explore-links"
+      "main-content";
+  }
+  .search-box {
+    grid-area: search;
+    grid-template-areas: "left-search search-settings-icon";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .search {
+    grid-area: left-search;
+    grid-template-areas: "search-icon search-text";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: #1c1c1c;
+    border-radius: 50px;
+    width: 90%;
+  }
+  .search-icon {
+    grid-area: search-icon;
+    margin: 5px;
+    width: 4%;
+    height: 4%;
+  }
+  .search-text {
+    grid-area: search-text;
+    background-color: #1c1c1c;
+    margin-top: 7px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    vertical-align: top;
+  }
+  .search-settings-icon {
+    grid-area: search-settings-icon;
+    margin: 5px;
+    width: 4%;
+    height: 4%;
+    float: right;
+    /* move up 20px */
+    margin-top: -40px;
+  }
+  
+  .explore-links {
+    grid-area: explore-links;
+    border-bottom: 1px solid #1c1c1c;
+    padding: 16px;
+    margin: 5px;
+  }
+  .explore-links a {
+    color: #6e767d;
+    font-size: 15px;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .explore-links a:hover {
+    color: #1da1f2;
+  }
+  .explore-links a.active {
+    color: #1da1f2;
+    border-bottom: 2px solid #1da1f2;
+  }
+  .main-content {
+    grid-area: main-content;
+    padding: 16px;
+    margin: 5px;
+  }
+  .main-content h2 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+  .main-content h4 {
+    color: #6e767d;
+    font-size: 13px;
+    margin: 0;
+  }
+  .main-content img {
+    border-radius: 10px;
+    float: right;
+    margin-right: 16px;
+    width: 70px;
+    /* make height equal to width */
+    height: 70px;
+    /* move up 10px */
+    margin-top: -50px;
+  }
