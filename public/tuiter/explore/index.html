@@ -6,56 +6,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tuiter</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
+<!-- five screen sizes: sm, md, lg, xl, xxl -->
+<!-- twitter home page -->
+<!-- The navigation on the left has both icons and text
+The link to the current page is highlighted, e.g., # Explore
+There is a small margin at the top of the page, below the navigation links on the left, below the search field, below the tabs
+The width of the Tuit button is the same as the navigation bar above it
+The main content is centered with equal margins on either side
+There's an equal spacing between the three columns
+The Follow buttons on the Who to follow side bar on the right are vertically centered
+The search field has a magnifying glass rendered within its border, and the text and placeholder start to the right of the icon
+The image at the top of the middle column has a large white text overlayed on top of it, but positioned in the bottom left corner of the image
+The cog on the right of the search field is vertically aligned with the search field
+The search field has rounded corners
+The borders of the avatar images under Who to follow are circles. Do not use circle images. Use rounded corners instead
+Use images similar to the ones shown. Use the text shown as a hint to find images on the Web
+Use the exact text shown -->
 
 <body>
-  <!-- search icon is search.png, settings icon is gear.png -->
-  <div class="header">
-    <div class="search-box">
-      <div class="search">
-        <img class="search-icon" src="search.png" />
-        <input class="search-text" type="text" placeholder="Search Twitter" />
+  <!-- first create the layout -->
+  <div class="container-fluid">
+    <!-- first row -->
+    <div class="row">
+      <!-- first column -->
+      <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link text-black border rounded-0" id="v-pills-home-tab" data-bs-toggle="pill"
+            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">
+            <i class="fas fa-home"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Home</span>
+          </a>
+          <a class="nav-link active text-white rounded-0" id="v-pills-explore-tab" data-bs-toggle="pill"
+            href="#v-pills-explore" role="tab" aria-controls="v-pills-explore" aria-selected="true">
+            <i class="fas fa-hashtag"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Explore</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-notifications-tab" data-bs-toggle="pill"
+            href="#v-pills-notifications" role="tab" aria-controls="v-pills-notifications" aria-selected="false">
+            <i class="fas fa-bell"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Notifications</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-notifications-tab" data-bs-toggle="pill"
+            href="#v-pills-notifications" role="tab" aria-controls="v-pills-notifications" aria-selected="false">
+            <i class="fas fa-bell"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Notifications</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-messages-tab" data-bs-toggle="pill"
+            href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+            <i class="fas fa-envelope"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Messages</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-bookmarks-tab" data-bs-toggle="pill"
+            href="#v-pills-bookmarks" role="tab" aria-controls="v-pills-bookmarks" aria-selected="false">
+            <i class="fas fa-bookmark"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Bookmarks</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-lists-tab" data-bs-toggle="pill"
+            href="#v-pills-lists" role="tab" aria-controls="v-pills-lists" aria-selected="false">
+            <i class="fas fa-list"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Lists</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-profile-tab" data-bs-toggle="pill"
+            href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+            <i class="fas fa-user"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">Profile</span>
+          </a>
+          <a class="nav-link text-dark border rounded-0" id="v-pills-more-tab" data-bs-toggle="pill"
+            href="#v-pills-more" role="tab" aria-controls="v-pills-more" aria-selected="false">
+            <i class="fas fa-ellipsis-h"></i>
+            <span class="d-none d-sm-none d-md-none d-lg-inline">More</span>
+          </a>
+          <!-- blue rounded button -->
+          <button type="button" class="btn btn-primary rounded-pill mt-3">Tuit</button>
+        </div>
       </div>
-      <img class="search-settings-icon" src="gear.png" />
-    </div>
-    <!-- Below the search input field there are a set of hyperlinks labeled "For you", "Trending", etc. The first link is highlighted with RGB color 29,161,242. The border below the highlighted link is the same color. All other links are color 110, 118, 125. The link fonts are 15px and padded all around by 16px. -->
-    <div class="explore-links">
-      <a href="explore.html" class="active">For you</a>
-      <a href="explore.html">Trending</a>
-      <a href="explore.html">News</a>
-      <a href="explore.html">Sports</a>
-      <a href="explore.html">Entertainment</a>
-      <a href="explore.html">More</a>
-    </div>
-  </div>
 
+      <!-- second column -->
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <!-- <div class="input-group mb-3">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                  class="fas fa-search"></i></button>
+              <input type="text" class="form-control" placeholder="Search Twitter" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            </div> -->
+            <!-- two column for search field, one for field and one for settings cog -->
+            <div class="row">
+              <div class="col-11">
+                <div class="input-group mb-3">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                      class="fas fa-search"></i></button>
+                  <input type="text" class="form-control" placeholder="Search Twitter" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                </div>
+              </div>
+              <div class="col-1">
+                <i class="fas fa-cog fa-2x text-primary" style="font-size: 1.5rem; margin-top: 0.5rem;"></i>
+              </div>
 
+              <div class="row">
+                <div class="col-12">
+                  <div class="tabs">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">For you</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Sports</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Entertainment</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-  <div class="explore-article">
-    <div class="explore-article-snippet">
-      <h2>Trending in Science</h2>
-      <h3>What is the difference between a virus and a bacterium?</h3>
-      <h4>1.2k tuits</h4>
-    </div>
-    <img src="virus.png" />
-  </div>
-  <div class="explore-article">
-    <div class="explore-article-snippet">
-      <h2>Trending in Science</h2>
-      <h3>What is the difference between a virus and a bacterium?</h3>
-      <h4>1.2k tuits</h4>
-    </div>
-    <img src="virus.png" />
-  </div>
-  <div class="explore-article">
-    <div class="explore-article-snippet">
-      <h2>Trending in Science</h2>
-      <h3>What is the difference between a virus and a bacterium?</h3>
-      <h4>1.2k tuits</h4>
-    </div>
-    <img src="virus.png" />
-  </div>
+              <!-- a div with an image as the background and text aligned at the bottom -->
+              <!-- image path: virus.png -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="virus.png" class="card-img-top" alt="...">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title" style="color: white;">COVID-19</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-</body>
-
-</html>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h6 class="card-text"><small class="text-muted">Coronavirus Update</small></h6>
+                          <!-- title has last updated muted next to it on the same line separated by a dash -->
+                          <!-- ex: Coronavirus Update - 1h -->
+                          <!-- text at bottom that says number of tuits -->
+                          <div class="row">
+                            <div class="col-11">
+                              <h5 class="card-title">Coronavirus Update</h5>
+                            </div>
+                            <div class="col-1">
+                              <h6 class="card-text"><small class="text-muted">1h</small></h6>
+                            </div>
+                          </div>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-muted">12.2k tuits</small></p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <img src="virus.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third column -->
+        <!-- who to follow -->
+        <!-- at the top is the title: who to follow -->
+        <!-- below that is a list of people to follow -->
+        <!-- 3 columns, 1 for image, 1 for name and username (two rows in this column), 1 for follow button -->
+        <!-- the follow button is a rounded blue button with white text -->
+        <!-- circular profile image -->
+        <!-- make it dissapear when the screen is small -->
+        <div class="col-3 d-none d-sm-none d-md-none d-lg-block">
+          <div class="row">
+            <div class="col-12">
+              <h5>Who to follow</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <!-- make it circular by adding rounded-circle class and forcing a square aspect ratio -->
+                    <img src="virus.png" class="img-fluid rounded-circle" alt="..." style="width: 8rem; height: 8rem;">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title">Card title</h6>
+                      <p class="card-text"><small class="text-muted">@username</small></p>
+                      <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
