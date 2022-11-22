@@ -7,7 +7,7 @@ import Assignment6 from "./labs/a6";
 import Assignment7 from "./labs/a7";
 import mongoose from "mongoose";
 const CONNECTION_STRING = "mongodb://localhost:27017/tuiter" || process.env.DB_CONNECTION_STRING;
-mongoose.connect(connectionString);
+mongoose.connect(CONNECTION_STRING);
 
 function App() {
        return (
